@@ -1,0 +1,56 @@
+{
+  "contexts": [
+    {
+      "type": "text",
+      "id": "my_doc",
+      "label": "A product description",
+      "text": "A Wikipedia is a \nfree online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    },
+    {
+      "type": "image",
+      "id": "my_image",
+      "label": "Image to annotate",
+      "src": "https://i.picsum.photos/id/1025/4951/3301.jpg",
+      "height": 300,
+      "width": 300
+    }
+  ],
+  "annotation_groups": [
+    {
+      "id": "main",
+      "title": "Describe the image",
+      "annotations": [
+        {
+          "type": "text",
+          "title": "Write title for image.",
+          "prompt": "Write a title for the above image.",
+          "id": "title",
+          "repeated": false,
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "^This image is.*$",
+              "description": "The title must starts with 'This image is'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Describe image",
+          "prompt": "Write 1-4 sentences to describe the image.",
+          "id": "caption",
+          "repeated": true,
+          "min": 1,
+          "max": 4,
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "^.{5,30}$",
+              "description": "Each sentence must contains 5-30 chars'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

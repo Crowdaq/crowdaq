@@ -1,0 +1,140 @@
+{
+  "$schema": "http://schema.crowdaq.com/annotation_task.json#",
+
+  "contexts": [
+    {
+      "type": "html",
+      "id": "my_html",
+      "label": "A HTML Document",
+      "html": "<p style='color: red'>Wikipedia</p> is a <br>free online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    },{
+      "type": "text",
+      "id": "my_doc",
+      "label": "A product description",
+      "text": "A Wikipedia is a \nfree online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    },
+    {
+      "type": "video",
+      "id": "my_video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/43/Espresso_video.ogv",
+      "label": "Reference Video",
+      "height": 300,
+      "width": 300
+    },
+    {
+      "type": "image",
+      "id": "my_image",
+      "label": "Image to annotate",
+      "src": "https://i.picsum.photos/id/1025/4951/3301.jpg",
+      "height": 300,
+      "width": 300
+    },
+    {
+      "type": "audio",
+      "id": "my_audio",
+      "label": "Audio to listen",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/41/Joy_to_the_World.ogg"
+    }
+  ],
+  "annotation_groups": [
+    {
+      "id": "my_task",
+      "title": "Main Task",
+      "annotations": [
+        {
+          "type": "span-from-text",
+          "prompt": "Please select one event:",
+          "id": "select_a_token",
+          "from_context": "my_doc"
+        },
+        {
+          "type": "span-from-text",
+          "prompt": "Please select multiple events:",
+          "id": "select_some_token",
+          "from_context": "my_doc",
+          "repeated": true
+        },
+        {
+          "type": "text",
+          "prompt": "Please enter your questions.",
+          "id": "one_text_input"
+        },
+        {
+          "type": "text",
+          "prompt": "Please enter your question.",
+          "id": "multiple_text_input",
+          "repeated": true
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Do you use wikipedia?",
+          "id": "use_wikipedia",
+          "options": {
+            "A": "Yes",
+            "B": "No"
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Select sentiment for this review:",
+          "id": "sentiment",
+          "options": {
+            "A": "Positive",
+            "B": "Neutral",
+            "C": "Negative"
+          }
+        }
+      ]
+    },
+    {
+      "id": "my_repeated_task",
+      "title": "Main Task (Repeated)",
+      "repeated": true,
+      "annotations": [
+        {
+          "type": "span-from-text",
+          "prompt": "Please select one event:",
+          "id": "select_a_token",
+          "from_context": "my_doc"
+        },
+        {
+          "type": "span-from-text",
+          "prompt": "Please select multiple events:",
+          "id": "select_some_token",
+          "from_context": "my_doc",
+          "repeated": true
+        },
+        {
+          "type": "text",
+          "prompt": "Please enter your questions.",
+          "id": "one_text_input"
+        },
+        {
+          "type": "text",
+          "prompt": "Please enter your question.",
+          "id": "multiple_text_input",
+          "repeated": true
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Do you use wikipedia?",
+          "id": "use_wikipedia",
+          "options": {
+            "A": "Yes",
+            "B": "No"
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Select sentiment for this review:",
+          "id": "sentiment",
+          "options": {
+            "A": "Positive",
+            "B": "Neutral",
+            "C": "Negative"
+          }
+        }
+      ]
+    }
+  ]
+}

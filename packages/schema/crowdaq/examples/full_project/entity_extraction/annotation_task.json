@@ -1,0 +1,12 @@
+{
+  "$schema": "http://schema.crowdaq.com/annotation_task.json#",
+  "id": "?1",
+  "annotation_groups": [{
+    "title": "hello",
+    "annotations": [
+      {
+        "type":"datetime"
+      }
+    ]
+  }]
+}

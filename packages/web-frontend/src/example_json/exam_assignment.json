@@ -1,0 +1,84 @@
+{
+  "exam_assignment_id": 123,
+  "instruction_name": "i1",
+  "tutorial_name": "t1",
+  "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the main reason so many people moved to California in 1849?",
+          "question_id": "STHSTH1",
+          "options": {
+            "A" : "California land was fertile, plentiful, and inexpensive.",
+            "B" : "Gold was discovered in central California.",
+            "C" : "The east was preparing for a civil war.",
+            "D" : "They wanted to establish religious settlements."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of these assessment findings, if identified in a client who has pneumonia, indicates that the client needs suctioned?",
+          "question_id": "STHSTH2",
+          "options": {
+            "A" : "Absence of adventitious breath sounds.",
+            "B" : "Respiratory rate of 18 breaths per minute.",
+            "C" : "Inability to cough up sputum.",
+            "D" : "Wheezing prior to bronchodilator therapy."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of these assessment findings, if identified in a client who has pneumonia, indicates that the client needs suctioned?",
+          "question_id": "STHSTH3",
+          "options": {
+            "A" : "Absence of adventitious breath sounds.",
+            "B" : "Respiratory rate of 18 breaths per minute.",
+            "C" : "Inability to cough up sputum.",
+            "D" : "Wheezing prior to bronchodilator therapy."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of these assessment findings, if identified in a client who has pneumonia, indicates that the client needs suctioned?",
+          "question_id": "STHSTH4",
+          "options": {
+            "A" : "Absence of adventitious breath sounds.",
+            "B" : "Respiratory rate of 18 breaths per minute.",
+            "C" : "Inability to cough up sputum.",
+            "D" : "Wheezing prior to bronchodilator therapy."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of these assessment findings, if identified in a client who has pneumonia, indicates that the client needs suctioned?",
+          "question_id": "STHSTH5",
+          "options": {
+            "A" : "Absence of adventitious breath sounds.",
+            "B" : "Respiratory rate of 18 breaths per minute.",
+            "C" : "Inability to cough up sputum.",
+            "D" : "Wheezing prior to bronchodilator therapy."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of these assessment findings, if identified in a client who has pneumonia, indicates that the client needs suctioned?",
+          "question_id": "STHSTH6",
+          "options": {
+            "A" : "Absence of adventitious breath sounds.",
+            "B" : "Respiratory rate of 18 breaths per minute.",
+            "C" : "Inability to cough up sputum.",
+            "D" : "Wheezing prior to bronchodilator therapy."
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Which of these assessment findings, if identified in a client who has pneumonia, indicates that the client needs suctioned?",
+          "question_id": "STHSTH7",
+          "options": {
+            "A" : "Absence of adventitious breath sounds.",
+            "B" : "Respiratory rate of 18 breaths per minute.",
+            "C" : "Inability to cough up sputum.",
+            "D" : "Wheezing prior to bronchodilator therapy."
+          }
+        }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$id": "https://schema.crowdaq.com/resources/tutorial.json",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Crowdaq Tutorial",
+  "type": "object",
+  "properties": {
+    "instruction_id": {
+      "$ref": "#/definitions/id_field"
+    },
+    "tutorial_id": {
+      "$ref": "#/definitions/id_field"
+    },
+    "question_set": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/exam_question"
+      }
+    }
+  },
+  "required": [
+    "question_set",
+    "tutorial_id"
+  ],
+  "additionalItems": false
+}

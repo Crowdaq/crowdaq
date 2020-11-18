@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "crowdaq-dev",
+            "driver": "PostgreSQL",
+            "name": "CrowdaqLocalDev",
+            "password": "12345678",
+            "pgOptions": {
+                "ssl": {}
+            },
+            "port": 55432,
+            "previewLimit": 50,
+            "server": "localhost",
+            "username": "postgres"
+        }
+    ]
+}

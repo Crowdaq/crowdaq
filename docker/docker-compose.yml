@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  webapp:
+    image: crowdaq/frontend:latest
+    ports:
+      - "18081:80"
+
+  backend:
+    image: crowdaq/backend:latest
+    deploy:
+      replicas: 1
+    environment:
+      CROWDAQ_INIT_DB: 'true'
+      APP_SECRET: 'YOU_NEED_TO_CHANGE_THIS'
+      DB_URL: 'postgres://crowdaq:CHANGE_DB_PASSWORD@db:5432/crowdaq'
+      CROWDAQ_CREATE_USER: 'true'
+      CROWDAQ_CREATE_USER_NAME: 'crowdaq'
+      CROWDAQ_CREATE_USER_PASSWORD: 'your_client_password'
+
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: 'crowdaq'
+      POSTGRES_PASSWORD: 'CHANGE_DB_PASSWORD'
+      POSTGRES_DB: 'crowdaq'
+

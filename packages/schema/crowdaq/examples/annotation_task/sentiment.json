@@ -1,0 +1,46 @@
+{
+  "contexts": [
+    {
+      "type": "text",
+      "id": "my_doc",
+      "label": "A product description",
+      "text": "A Wikipedia is a \nfree online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    }
+  ],
+  "annotation_groups": [
+    {
+      "id": "sentiment_annotation",
+      "title": "Sentiment Annotation",
+      "annotations": [
+        {
+          "type": "multiple-choice",
+          "prompt": "Select sentiment for this review:",
+          "id": "sentiment",
+          "options": {
+            "A": "Positive",
+            "B": "Neutral",
+            "C": "Negative"
+          }
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "If this is a positive review, which aspect is mentioned?",
+          "id": "aspect",
+          "options": {
+            "A": "Food",
+            "B": "Service",
+            "C": "Price"
+          },
+          "style": "select",
+          "conditions": [
+            {
+              "op": "eq",
+              "id":"sentiment",
+              "value":"A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

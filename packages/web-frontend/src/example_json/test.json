@@ -1,0 +1,8 @@
+{
+  "$schema": "http://schema.crowdaq.com/tutorial.json",
+  "tutorial_id": "1",
+  "instruction_id": "",
+  "question_set": [{
+    "type": "multiple-choice"
+  }]
+}

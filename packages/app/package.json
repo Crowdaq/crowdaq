@@ -1,0 +1,27 @@
+{
+  "name": "@crowdaq/app",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "Hao Wu <haowu@hooray.ai>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@code.hooray.cloud:haowu4/crowdaq-remake.git"
+  },
+  "scripts": {
+    "start": "node lib/app.js",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@crowdaq/backend": "^0.1.0"
+  }
+}

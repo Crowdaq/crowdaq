@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schema.crowdaq.com/tutorial.json",
+    "tutorial_id": "",
+    "instruction_id": "",
+    "question_set": [
+        {
+            "type": "multiple-choice",
+            "question": {
+                "question_text": "",
+                "options": {
+                    "A": "Text for option A",
+                    "B": "Text for option B (This is the correct answer)"
+                }
+            },
+            "answer": "B",
+            "explanation": {
+                "A": "Explanation for option A, You can give optional explanation for each answer.",
+                "B": "Explanation for option B"
+            }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+  "contexts": [
+    {
+      "type": "text",
+      "id": "my_doc",
+      "label": "A product description",
+      "text": "A Wikipedia is a \nfree online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    }
+  ],
+  "annotation_groups": [
+    {
+      "id": "rel_annotation",
+      "title": "Relationship Annotation",
+      "repeated": true,
+      "annotations": [
+        {
+          "type": "span-from-text",
+          "prompt": "Select the subject of the relation:",
+          "from_context": "my_doc",
+          "id": "subject"
+        },
+        {
+          "type": "span-from-text",
+          "prompt": "Select the predicate of the relation:",
+          "from_context": "my_doc",
+          "id": "predicate"
+        },
+        {
+          "type": "span-from-text",
+          "prompt": "Select the object of the relation:",
+          "from_context": "my_doc",
+          "id": "object"
+        }
+      ]
+    }
+  ]
+}

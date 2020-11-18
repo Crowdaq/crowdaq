@@ -1,0 +1,1 @@
+rm -rf dist; yarn build; sudo rm -rf /var/www/html/app; sudo cp -r dist/ /var/www/html/app

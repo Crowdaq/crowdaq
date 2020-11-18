@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schema.crowdaq.com/exam_question.json",
+    "type": "multiple-choice",
+    "question": {
+        "question_text": "",
+        "options": {
+            "A": "Text for option A",
+            "B": "Text for option B (This is the correct answer)"
+        }
+    },
+    "answer": "B"
+}

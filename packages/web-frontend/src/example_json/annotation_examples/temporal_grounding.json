@@ -1,0 +1,24 @@
+{
+  "$schema": "http://schema.crowdaq.com/annotation_task.json#",
+  "contexts": [
+    {
+      "type": "text",
+      "id": "my_doc",
+      "label": "A product description",
+      "text": "A Wikipedia is a \nfree online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    }
+  ],
+  "annotation_groups": [
+    {
+      "id": "temporal",
+      "title": "Temporal Annotation",
+      "annotations": [
+        {
+          "type": "datetime",
+          "prompt": "When is this article written?",
+          "id": "dct"
+        }
+      ]
+    }
+  ]
+}

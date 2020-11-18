@@ -1,0 +1,49 @@
+{
+  "contexts": [
+    {
+      "type": "text",
+      "id": "my_doc",
+      "label": "A product description",
+      "text": "A Wikipedia is a \nfree online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    }
+  ],
+  "annotation_groups": [
+    {
+      "id": "coref",
+      "title": "Coreference Annotation",
+      "repeated": true,
+      "annotations": [
+        {
+          "type": "span-from-text",
+          "prompt": "Select a person",
+          "from_context": "my_doc",
+          "id": "first",
+          "title": "Select an entity mention",
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "^\\S{3,8}$",
+              "description": "The span must has length 3-10, and contain no whitespace"
+            }
+          ]
+        },
+        {
+          "type": "span-from-text",
+          "prompt": "Select all mention of the person you selected above.",
+          "from_context": "my_doc",
+          "id": "rest",
+          "repeated": true,
+          "max": 3,
+          "title": "Select the rest of mentions",
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "^\\S{3,8}$",
+              "description": "The span must has length 3-10, and contain no whitespace"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

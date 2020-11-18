@@ -1,0 +1,93 @@
+{
+  "contexts": [
+    {
+      "type": "text",
+      "id": "my_doc",
+      "label": "A product description",
+      "text": "A Wikipedia is a \nfree online encyclopedia, \ncreated and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+    }
+  ],
+  "annotation_groups": [
+    {
+      "id": "warmup_1",
+      "title": "Warm Question 1",
+      "annotations": [
+        {
+          "type": "span-from-text",
+          "prompt": "What event is happening?:",
+          "id": "events",
+          "from_context": "my_doc",
+          "repeated": true,
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "^\\S{3,8}$",
+              "description": "The span must has length 3-10, and contain no whitespace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warmup_2",
+      "title": "Warm Question 2",
+      "annotations": [
+        {
+          "type": "span-from-text",
+          "prompt": "What event has already finished?",
+          "id": "events",
+          "from_context": "my_doc",
+          "repeated": true,
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "^\\S{3,8}$",
+              "description": "The span must has length 3-10, and contain no whitespace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main",
+      "title": "Ask question about temporal relations",
+      "repeated": true,
+      "min": 8,
+      "max": 12,
+      "annotations": [
+        {
+          "type": "text",
+          "prompt": "Ask a question about temporal relation:",
+          "id": "question",
+          "repeated": false,
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "How.*\\?",
+              "description": "A valid question must starts wit 'How' and ends with ?"
+            },
+            {
+              "type": "regex",
+              "regex": ".*(after|before).*",
+              "description": "Must include \"before\" or \"after\""
+            }
+          ]
+        },
+        {
+          "type": "span-from-text",
+          "prompt": "Please select multiple events:",
+          "id": "answers",
+          "from_context": "my_doc",
+          "repeated": true,
+          "constraints": [
+            {
+              "type": "regex",
+              "regex": "^\\S{3,8}$",
+              "description": "The span must has length 3-10, and contain no whitespace"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

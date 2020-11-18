@@ -1,0 +1,17 @@
+{
+  "name": "@crowdaq/schema",
+  "version": "0.1.0",
+  "description": "",
+  "main": "crowdaq/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonschema": "^1.2.6"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
