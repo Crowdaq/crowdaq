@@ -31,5 +31,29 @@ To start frontend app:
 npx lerna exec --scope @crowdaq/frontend npm run serve
 ```
 
+## Deployment
+
+We recommend deploy crowdaq with docker, to do that, simply run:
+```bash
+./build_docker.sh
+```
+
+This will generate two docker images: crowdaq/frontend and crowdaq/backend. Then you can create a crowdaq cluster using docker compose.
+
+```bash
+cd docker
+docker-compose up
+```
+
+Once you see this line in the output:
+```
+backend_1  | {"message":"🚀 Server ready at http://localhost:80/apiV2","level":"info","timestamp":"2020-11-18T01:34:00.693Z"}
+```
+
+You can go to http://localhost:18081 and the default username:password is crowdaq:your_client_password, which can be changed by modifying `docker/docker-compose.yml`. 
+
+
+
+
 
 
