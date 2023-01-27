@@ -11,8 +11,10 @@ v12.18.1
 
 To install packages, run
 
-```
+```bash
 npx lerna bootstrap
+# to install knex command
+npm install -g knex
 ```
 
 
@@ -52,6 +54,16 @@ backend_1  | {"message":"🚀 Server ready at http://localhost:80/apiV2","level"
 
 You can go to http://localhost:18081 and the default username:password is crowdaq:your_client_password, which can be changed by modifying `docker/docker-compose.yml`. 
 
+
+## Creating new user
+
+```bash
+npx lerna exec --scope @crowdaq/backend "node scripts/create_new_user.js" -- --user hao
+# OR
+npx lerna exec --scope @crowdaq/backend "node scripts/create_new_user.js" -- --user hao --password 123456
+# OR
+npx lerna exec --scope @crowdaq/backend "node scripts/create_new_user.js" -- --user hao --db_str "postgres://postgres:12345678@localhost:55432/crowdaq-dev"
+```
 
 
 

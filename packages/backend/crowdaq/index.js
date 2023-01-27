@@ -1,5 +1,5 @@
 /* global process:writable */
-const {version} = require('./version.json')
+const { version } = require('./version.json')
 const express = require('express');
 const logger = require('./logger')
 const ApiServer = require("./api")
@@ -7,7 +7,7 @@ const cors = require('cors')
 const userApp = require("./apps/users");
 const crowdaqApp = require("./apps/crowdaq");
 
-function getApp(crowdaqConfig){
+function getApp(crowdaqConfig) {
     const app = express();
 
     logger.info(`Running version ${version}`)

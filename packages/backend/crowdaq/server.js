@@ -1,6 +1,6 @@
 /* global process:writable */
 
-const {getApp, logger} = require("./index");
+const { getApp, logger } = require("./index");
 
 const crowdaqConfigs = {
     production: {
@@ -17,12 +17,12 @@ const crowdaqConfigs = {
     }
 }
 
-const config = process.env.NODE_ENV === 'production' ?  crowdaqConfigs.production : crowdaqConfigs.development;
+const config = process.env.NODE_ENV === 'production' ? crowdaqConfigs.production : crowdaqConfigs.development;
 const apiServer = getApp(config);
 
-if (process.env.NODE_ENV !== 'production'){
+if (process.env.NODE_ENV !== 'production') {
     apiServer.execute(
-        "register", 
+        "register",
         {
             username: "test_user",
             password: "password"
@@ -38,7 +38,7 @@ if (process.env.NODE_ENV !== 'production'){
 }
 
 if (process.env.CROWDAQ_CREATE_USER === 'true') {
-    if (process.env.CROWDAQ_CREATE_USER_NAME && process.env.CROWDAQ_CREATE_USER_PASSWORD){
+    if (process.env.CROWDAQ_CREATE_USER_NAME && process.env.CROWDAQ_CREATE_USER_PASSWORD) {
         apiServer.execute(
             "register",
             {
