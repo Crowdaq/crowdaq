@@ -1071,7 +1071,7 @@ function installOn(api) {
 
 
                     // This worker passed the exam, we shall grant qualification
-                    if ((worker_platform === 'mturk') && exam_config.qualification_id) {
+                    if ((worker_platform === 'mturk' || worker_platform === 'mturk-sandbox') && exam_config.qualification_id) {
                         const ownerProfile = await GET_FROM_DB("RequesterProfile", {username: owner});
 
                         if (ownerProfile.aws_access_key_id && ownerProfile.aws_secret_access_key) {
